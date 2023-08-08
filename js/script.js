@@ -29,7 +29,8 @@ loginForm.addEventListener("submit", (e) => {
         .then((response) => {
           if (response.ok) {
             console.log("LOGIN SUCCESS.")
-            window.location.replace(hostname + 'plantrip_business_web/home_page.php');
+            // window.location.replace(hostname + 'plantrip_business_web/home_page.php');
+            window.location.replace(hostname + 'home_page.php');
             localStorage.setItem("username",username.value.toLowerCase());
           } else {
             console.log("LOGIN FAI.");
