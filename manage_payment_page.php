@@ -27,7 +27,7 @@
 
     <main class="main-content">
         <header class="page-header">
-            <h2>Welcome, Blacksnow</h2>
+            <h2>จัดการค่าชำระบริการ</h2>
         </header>
         <div class="dashboard-cards">
             <div class="card">

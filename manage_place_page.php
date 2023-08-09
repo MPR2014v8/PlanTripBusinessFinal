@@ -27,34 +27,29 @@
 
     <main class="main-content">
         <header class="page-header">
-            <h2>Welcome, Blacksnow</h2>
+            <h2>จัดการกิจการ</h2>
         </header>
-        <div class="dashboard-cards">
-            <div class="card">
-                <h3>Total Sales</h3>
-                <p>$250,000</p>
-            </div>
-            <div class="card">
-                <h3>Orders</h3>
-                <p>1,200</p>
-            </div>
-            <div class="card">
-                <h3>Customers</h3>
-                <p>5,000</p>
-            </div>
-            <div class="card">
-                <h3>Products</h3>
-                <p>350</p>
-            </div>
-        </div>
-        <div class="charts">
-            <!-- Add your charts here -->
-        </div>
+        <div class="container mt-5">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">รหัสสถานที่</th>
+                  <th scope="col">ชื่อสถานที่</th>
+                  <th scope="col">อำเภอ</th>
+                  <th scope="col">ประเภทสถานที่</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                <!-- Table rows will be added here dynamically -->
+              </tbody>
+            </table>
+          </div>
     </main>
 </div>
 
 <script src="js/variables.js"></script>
 <script src="js/script-home.js"></script>
+<script src="js/sc-tablePLace.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="css/styles-login.css">
+    <link rel="stylesheet" type="text/css" href="css/styles-login.css">
 
   </head>
   <body>
@@ -55,7 +55,7 @@
     <!-- Include the Bootstrap JS scripts -->
     <script src="js/variables.js"></script>
     <script src="js/script.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   </body>
 </html>

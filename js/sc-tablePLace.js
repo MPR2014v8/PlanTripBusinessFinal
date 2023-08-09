@@ -1,0 +1,39 @@
+var apiUrl =
+  "https://plantrip-final-f854bbde88de.herokuapp.com/business/place-user/" +
+  str +
+  "/";
+
+var lsPlace = [];
+
+fetch(apiUrl)
+  .then((res) => {
+    return res.json();
+  })
+  .then(async (data) => {
+    await data.forEach((p) => {
+      const id = p.id;
+      const namePlace = p.name;
+      const district = p.district;
+      const type = p.type;
+
+      lsPlace.push({ id: id, name: namePlace, district: district, type: type });
+    });
+
+    console.log(lsPlace);
+
+    const tableBody = document.getElementById('table-body');
+    lsPlace.forEach(p => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <th scope="row">${p.id}</th>
+          <td>${p.name}</td>
+          <td>${p.district}</td>
+          <td>${p.type}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+  })
+  .catch((error) => console.log(error));
+
+
+  
