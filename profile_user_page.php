@@ -39,15 +39,15 @@
                     <form id="editUserProfile-form" enctype="multipart/form-data">
                       <div class="mb-3">
                         <label for="username" class="form-label">อีเมล</label>
-                        <input type="email" class="form-control" id="email" name="email" value="" required>
+                        <input type="email" class="form-control" id="email" name="email" value="" >
                       </div>
                       <div class="mb-3">
                         <label for="text" class="form-label">ชื่อจริง</label>
-                        <input type="text" class="form-control" id="first_name" name="first_name" value="" required>
+                        <input type="text" class="form-control" id="first_name" name="first_name" value="" >
                       </div>
                       <div class="mb-3">
                         <label for="text" class="form-label">นามสกุล</label>
-                        <input type="text" class="form-control" id="last_name" name="last_name" value="" required>
+                        <input type="text" class="form-control" id="last_name" name="last_name" value="" >
                       </div>
                       <div class="text-center">
                         <button type="submit" class="btn btn-danger btn-lg btn-block" style="width:100%">แก้ไขข้อมูล</button>

@@ -95,3 +95,6 @@ li:hover {
   background-color: white;
 }
 
+.form-group {
+  padding: 15px;
+}

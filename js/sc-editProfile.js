@@ -1,4 +1,3 @@
-// let id  = localStorage.getItem("user_id");
 var apiUrl =
   "https://plantrip-final-f854bbde88de.herokuapp.com/user/" + str + "/";
 let id = "";
@@ -53,7 +52,20 @@ editUserForm.addEventListener("submit", (e) => {
   last_name = document.getElementById("last_name");
 
   if (email.value == "" || first_name.value == "" || last_name.value == "") {
-    alert("กรุณาระบุข้อมูลทุกช่องกรอกให้ครบถ้วน.");
+    if (email.value == "") {
+      alert("กรุณากรอก email");
+      return;
+    }
+
+    if (first_name.value == "") {
+      alert("กรุณากรอก first_name");
+      return;
+    }
+
+    if (last_name.value == "") {
+      alert("กรุณากรอก last_name");
+      return;
+    }
   } else {
     // perform operation with form input
     let options = {
@@ -68,7 +80,7 @@ editUserForm.addEventListener("submit", (e) => {
       }),
     };
 
-    id = apiUrl = "https://plantrip-final-f854bbde88de.herokuapp.com/user/" + id + "/";
+    apiUrl = "https://plantrip-final-f854bbde88de.herokuapp.com/user/" + id + "/";
 
     fetch(apiUrl, options)
       .then((response) => {

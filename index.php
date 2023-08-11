@@ -29,7 +29,6 @@
                     class="form-control"
                     id="username"
                     name="username"
-                    required
                   />
                 </div>
                 <div class="form-group">
@@ -39,7 +38,6 @@
                     class="form-control"
                     id="password"
                     name="password"
-                    required
                   />
                 </div>
                 <div class="text-center">

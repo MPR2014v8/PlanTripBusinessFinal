@@ -1,4 +1,4 @@
-const apiUrl = "https://plantrip-final-f854bbde88de.herokuapp.com/login/?"; // Replace with your API URL
+var apiUrl = "https://plantrip-final-f854bbde88de.herokuapp.com/login/?"; // Replace with your API URL
 
 let str = localStorage.getItem("username");
 console.log("username=" + str);
@@ -12,10 +12,20 @@ loginForm.addEventListener("submit", (e) => {
   let password = document.getElementById("password");
 
   if (username.value == "" || password.value == "") {
-    alert("Ensure you input a value in both fields!");
+    if (username.value == "") {
+      alert("กรุณากรอก username");
+      return;
+    }
+
+    if (password.value == "") {
+      alert("กรุณากรอก password");
+      return;
+    }
   } else {
     let group_id = "0";
-    const url =
+    let user_id = "0";
+
+    var url =
       "https://plantrip-final-f854bbde88de.herokuapp.com/chk_group_id/" +
       username.value +
       "/";
@@ -25,8 +35,12 @@ loginForm.addEventListener("submit", (e) => {
       })
       .then((data) => {
         data.forEach((user) => {
-          group_id = Object.values(user);
-          console.log(group_id);
+          group_id = Object.values(user.groups);
+          user_id = user.id;
+          console.log("gr=" + group_id);
+          console.log("us=" + user_id);
+
+          localStorage.setItem("user_id", user_id);
         });
 
         console.log("group_id=" + group_id);
